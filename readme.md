@@ -1,7 +1,7 @@
 # Token-authentication/authorization in .Net Core with OpenIddict and MongoDB #
 
 ### Summary ###
-Sample shows how you can use [OpenIddict](https://github.com/openiddict/openiddict-core) framework developed by @Kevin Chalet for integrating token-based authentication/authorization in AspNet Core.   
+Project shows how you can use [OpenIddict](https://github.com/openiddict/openiddict-core) framework developed by @Kevin Chalet for integrating token-based authentication/authorization in AspNet Core.   
 
 Built-in implementation developed by @Kevin Chalet uses EntityFramework Core extensions with the out-of-the-box .Net Core Identity EF stores.
 
