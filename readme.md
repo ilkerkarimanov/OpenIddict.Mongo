@@ -1,15 +1,15 @@
 # Token-authentication/authorization in .Net Core with OpenIddict and MongoDB #
 
 ### Summary ###
-Sample shows how you can use **OpenIddict** framework developed by @KevinChalet for integrating token-based authentication/authorization in AspNet Core.   
+Sample shows how you can use [OpenIddict](https://github.com/openiddict/openiddict-core) framework developed by @Kevin Chalet for integrating token-based authentication/authorization in AspNet Core.   
 
-Built-in implementation developed by @KevinChalet uses EntityFramework Core extensions with the out-of-the-box .Net Core Identity EF stores.
+Built-in implementation developed by @Kevin Chalet uses EntityFramework Core extensions with the out-of-the-box .Net Core Identity EF stores.
 
 This sample include two adapters for the purpose to use MongoDB as persistance layer for both .Net Core Identity and OpenIddict tokens store.
 
 Project is developed as part of custom authorization functionality for securing web clients by incorporating OAuth password-credentials flow and some additional layering as base skeleton.
 
-Who ever needs on ported implementation of the OpenIddict clients/token store should check this link:
+Who ever needs only ported implementation of the OpenIddict clients/token store should check this link:
 
 https://github.com/ilkerkarimanov/openiddict-core/tree/mongo-1.0.1
 
@@ -40,7 +40,7 @@ Version  | Date | Comments
 # Q/A #
 **Q**: Why using OpenIddict? 
 
-**A**: Personally, I use pure implementetation of the OpenIdConnect.Server project (since beta-4...) by @KevinChalet for all my custom flows. Recently I've checked that he implemented solution (OpenIddict) which can be easily plugged into out-of-the-box Identity stack - so why not do it for MongoDB too.
+**A**: Personally, I use pure implementation of the OpenIdConnect.Server project (since beta-4...) by @Kevin Chalet for all my custom flows. Recently I've checked that he has done extension(OpenIddict) of it, which can be easily plugged into out-of-the-box Identity stack - so why not to do it for MongoDB too.
 
 **Q**: What is the purpose of that multi-layer/project separation?
 
@@ -49,7 +49,6 @@ Version  | Date | Comments
 **Q**: What is the purpose of OriginAllowed field in OpenIddict.Models.OpenIddictApplication?
 
 **Long A**: It is expected if user as successfully authenticated by username/password at least to be associated with some security domain, something which identifies the client/origin. Client interface store information for the origin which is critical if we want to secure against unknow cross-origin requests.
-Client interface also support types like Javascript(or secure clients...) as you might want to differentiate between supported auth scenerios and client types - passsword, implicit etc.
 
 # Code Samples #
 
