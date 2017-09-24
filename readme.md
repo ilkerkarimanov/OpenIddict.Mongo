@@ -44,7 +44,7 @@ Version  | Date | Comments
 # Q/A #
 **Q**: Why using OpenIddict? 
 
-**A**: Personally, I use pure implementation of the OpenIdConnect.Server project (since beta-4...) by @Kevin Chalet for all my custom flows. Recently I've checked that he has done extension(OpenIddict) of it, which can be easily plugged into out-of-the-box Identity stack - so why not to do it for MongoDB too.
+**A**: Personally, I use pure implementation of the AspNet.Security.OpenIdConnect.Server project (since beta-4...) by @Kevin Chalet for all my custom flows. Recently I've checked that he has done extension(OpenIddict) of it, which can be easily plugged into out-of-the-box Identity stack - so why not to do it for MongoDB too.
 
 **Q**: What is the purpose of that multi-layer/project separation?
 
