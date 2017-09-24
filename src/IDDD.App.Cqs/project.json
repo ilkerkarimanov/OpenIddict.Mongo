@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0-*",
+  "description": "IDDD.App.Cqs Class Library",
+
+  "dependencies": {
+    "FluentValidation": "7.1.1",
+    "IDDD.App": "1.0.0",
+    "IDDD.Core.Cqs": "1.0.0",
+    "IDDD.Domain": "1.0.0",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+    "Scrutor": "1.10.0",
+    "System.ComponentModel.Annotations": "4.3.0",
+    "System.Linq": "4.3.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ],
+      "dependencies": {
+        "NETStandard.Library": "1.6.1"
+      }
+    }
+  }
+}

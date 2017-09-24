@@ -1,0 +1,23 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "JetBrains.Annotations": "10.3.0",
+    "MongoDB.Driver": "2.4.2",
+    "OpenIddict.Core": "1.0.0",
+    "OpenIddict.Models": "1.0.0",
+    "System.ComponentModel.TypeConverter": "4.3.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ],
+      "dependencies": {
+        "NETStandard.Library": "1.6.1"
+      }
+    }
+  }
+}

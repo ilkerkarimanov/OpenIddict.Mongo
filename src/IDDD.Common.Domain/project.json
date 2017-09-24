@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "description": "IDDD.Common.Domain Class Library",
+  "dependencies": {
+    "NullGuard.Fody": "1.4.6",
+    "IDDD.Common": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "net451": {}
+  }
+}

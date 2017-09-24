@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0-*",
+  "description": "IDDD.Core.Domain Class Library",
+  "dependencies": {
+    "IDDD.Core": "1.0.0",
+    "NullGuard.Fody": "1.6.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ],
+      "dependencies": {
+        "NETStandard.Library": "1.6.1"
+      }
+    }
+  }
+}

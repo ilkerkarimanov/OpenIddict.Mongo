@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0-*",
+  "description": "IDDD.Infrastructure.Mongo Class Library",
+
+  "dependencies": {
+    "IDDD.Core": "1.0.0",
+    "IDDD.Domain": "1.0.0",
+    "IDDD.Infrastructure": "1.0.0",
+    "Microsoft.AspNetCore.Identity": "1.1.0",
+    "Microsoft.Extensions.DependencyInjection": "1.1.0",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+    "MongoDB.Bson": "2.4.4",
+    "MongoDB.Driver": "2.4.4",
+    "MongoDB.Driver.Core": "2.4.4",
+    "Newtonsoft.Json": "9.0.1",
+    "Scrutor": "1.10.0",
+    "OpenIddict.Core": "1.0.0",
+    "OpenIddict.Mongo": "1.0.0",
+    "OpenIddict.Models": "1.0.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ],
+      "dependencies": {
+        "NETStandard.Library": "1.6.1"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0-*",
+  "description": "IDDD.Domain Class Library",
+
+  "dependencies": {
+    "IDDD.Core.Domain": "1.0.0",
+    "Microsoft.AspNetCore.Identity": "1.1.0",
+    "Microsoft.Bcl": "1.1.9"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ],
+      "dependencies": {
+        "NETStandard.Library": "1.6.1"
+      }
+    }
+  }
+}

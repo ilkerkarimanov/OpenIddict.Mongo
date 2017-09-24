@@ -1,0 +1,202 @@
+{
+	"variables": [],
+	"info": {
+		"name": "IDDD",
+		"_postman_id": "a173230c-f677-e1c4-cc0c-c7713e298672",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/clients",
+			"request": {
+				"url": "http://localhost:5000/api/clients",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\":\"idddWeb\",\r\n    \"name\":\"idddWeb\",\r\n    \"applicationType\":\"1\",\r\n    \"origin\":\"http://localhost:6000\",\r\n\t\"redirectUri\":\"http://localhost:6000\",\r\n\t\"logoutRedirectUri\": \"http://localhost:6000\",\r\n\t\"confirmationUri\": \"http://localhost:6000/confirm\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/account/register",
+			"request": {
+				"url": "http://localhost:5000/api/account/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"testme@gmail.com\",\n\t\"clientKey\":\"iddWeb\",\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/account/password",
+			"request": {
+				"url": "http://localhost:5000/api/account/password",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"testme@gmail.com\",\n\t\"password\":\"Pa$$w0rd\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/connect/token",
+			"request": {
+				"url": "http://localhost:5000/connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "testme@gmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "Pa$$w0rd",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "idddWeb",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "scope",
+							"value": "offline_access",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/connect/token",
+			"request": {
+				"url": "http://localhost:5000/connect/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "idddWeb",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "CfDJ8HkADOaYlbBIsaKIfogqBef9GLkbs-Zx9EafopYy9_keWXfmt8PfE1sNrXbbc853l1nsxTEM0hkPwsWize2u6nFPpJgzKl-EYZQnWtmn2auciwunJ_JucxV_J_r4grtkU3e_v1BQtSi_TTYc5gw7P_Sl5UHwc4s6wKd_hw_vQtdw2iUTLDRvOUwdjze5-iVVLATx7vc44yZ1pTWlIHb4uAk-JGL7sPZ8fbFU9g7OD-SnEY4aYDzfaPG7aUX-CImc6i_biA5z-pX0ozxIUfT_l9HxEOWsrSJ0CkIQiqhqEpsmm5uzCaeF_AlLgC1XiOBA7AY19nna6t5LSET0y6aMAKntjTHIaaJwI_T7eOeqoxI8NRrMz79Mr1qktpprgDEvR_b-s1Vq1xWOOD70hBYN2r6elvp00-IGZ-BbdXvtJg5DweGVzxZL4MteXoDY2q6loFR8kBfOzxPuTamIn__-ylx4w1Lnu-nuY794R57IQAzseWNRNEV3R1OFyd00S0Si_DpEghg038yQAv8UzV0aMliCit9JD2nPj4VJZ4N5o5wFpuA4KMGGEj3RKpOyrgZkOXYhik6yt3PK7QSVdJKIR7C0Pe4VA1l_J80uWHmABryvQ2BCSzEUiQC_PwTzwtzZwVzj5mNa4j6m39qBpD1m5REZmLou-mT5ddRNyHJ_HMyY2-xfYgJoByQfdQuvngFUx0jUVkjjz-cKHJWS280QWbSOvGFMvNQQctqZhFW9kVzkPsfJ6uWlfQ0v4hmPnipcjQ",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/todos",
+			"request": {
+				"url": "http://localhost:5000/api/todos",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer CfDJ8HkADOaYlbBIsaKIfogqBedjF98GbHTPAsFsDfHvaJ_y9MwNrFXh5sCuRKZfSFu_IQMgqZHDzsyxaRmuHOQwrpUNLKlOcQooexRfxvY-wBewubbZCYtUwVaD3mbQxVTarPitGc8teAIiuhht1GIZKw1jNrJDLDP-CU_-dmfmF9PNpw044_1nnO_tMBwACR4y6RhJLIFotfymc1jFowfzK3qj2aEYa6f2400_kN4l9jYZYRbpnJht7yzr6X9koBTbig_G0mos1bIh3A4EkUAv3Wnsg6dd9WO89w9afey0yYwVcNyIt8Sr4y9R4Y0l1wP4zs1XWFuQXF5H4PJQQcb_qgvanUUMzVEADbLJhJZokw_EZYhlQjz40-2SxZcUbNVAbL9_fdhSoSCYvb4h22oWFUfQAlINjTDbwxntn7-OYHjf8htHVv_WA4FygXeFeX2ac1QFNc9LwtyYfaKz2CWhS6-Nv54Np2elrowm0gABwPeW-NdmV-GP5dx5l2qE1nfqLIbgKAuOtrwxhU0cQsLHsaMuQGhb9IJdLDMkfxu7S1PJuMxF55DloqMCVzcb3uz197LG7iEyjXoLwF5EN89U0RJgHFauZjk6uTzaOZzvUA7TephsNcR_W8BQjZV6jWusX3AV9p9IyhWpkrK8b2OFlvjfD77LFYzyRxN3N9CirR0zMZP2Ejpl-NIiU-vgiqVQW4r24Dv1dcLK2tskQ7Xcf-udQ6rOOsd8gusj-gFqGoo0sAOjmmUo127P61PTQN-x763Bt1yQ8cI2SN1SYAekSeLc3OpaJkEQGWJ8JtDoR61TXAR01q75y0ZZ_bAd-PTiUg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Go to the grossery\",\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
