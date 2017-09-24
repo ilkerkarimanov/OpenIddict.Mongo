@@ -7,6 +7,10 @@ Built-in implementation developed by @Kevin Chalet uses EntityFramework Core ext
 
 This sample include two adapters for the purpose to use MongoDB as persistance layer for both .Net Core Identity and OpenIddict tokens store.
 
+For the .Net Core Identity, I've implemented base internal interfaces - UserStore`<`IdentityUser`>` and RoleStore`<`IdentityRole`>`. Both are resposible for managing auth functionalities like registrations,two-factor auth, password recovery and verifications (email, token...).
+
+For the OpenIddict extensions, I've plugged in persistance adapter for the core interfaces - OpenIddictApplicationStore, OpenIddictAuthorizationStore, OpenIddictScopeStore, OpenIddictTokenStore. OpenIddict.Models are also extended with additional properties for functionalities like client deactivation and client origin validation.
+
 Project is developed as part of custom authorization functionality for securing web clients by incorporating OAuth password-credentials flow and some additional layering as base skeleton.
 
 Who ever needs only ported implementation of the OpenIddict clients/token store should check this link:
@@ -163,8 +167,10 @@ Code snippet:
 ## CORS ##
 ```C#
 ...
+			//intercept connection's client origin
             Request.HttpContext.Items.Add("as:clientAllowedOrigin", result.AllowedOrigin);
 ...
+			//set client origin into the response access control
             var allowedOrigin = Request.HttpContext.Items["as:clientAllowedOrigin"] as string;
             if (allowedOrigin != null)
             {
