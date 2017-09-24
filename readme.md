@@ -44,11 +44,11 @@ Version  | Date | Comments
 
 **Q**: What is the purpose of that multi-layer/project separation?
 
-**Short A**: Better control of what is part of your solution interfaces(In) and what is supporting your core implementation(Out).
+**A**: Better control of what is part of your solution interfaces(In) and what is supporting your core implementation(Out).
 
 **Q**: What is the purpose of OriginAllowed field in OpenIddict.Models.OpenIddictApplication?
 
-**Long A**: It is expected if user as successfully authenticated by username/password at least to be associated with some security domain, something which identifies the client/origin. Client interface store information for the origin which is critical if we want to secure against unknow cross-origin requests.
+**A**: It is expected if user as successfully authenticated by username/password at least to be associated with some security domain, something which identifies the client/origin. Client interface store information for the origin which is critical if we want to secure against unknow cross-origin requests.
 
 # Code Samples #
 
